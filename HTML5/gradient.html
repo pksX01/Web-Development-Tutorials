@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <canvas width="720" height="540" id="container"></canvas>
+        <input type="button" value="Click to draw linear gradient" onclick="drawGradient()"/>
+        <input type="button" value="Click to draw radial gradient" onclick="drawRadialGradient()"/>
+        <input type="button" value="Draw Text" onclick="drawText()"/>
+        <script>
+            var canvas;
+            var context
+            function drawCanvas(){
+                canvas = document.getElementById("container");
+                context = canvas.getContext("2d");
+            }
+            function drawGradient(){
+                drawCanvas();
+                var grd = context.createLinearGradient(100,200,300,400);
+                grd.addColorStop(0,"red");
+                grd.addColorStop(0.3,"white");
+                grd.addColorStop(1,"pink");
+                context.fillStyle=grd;
+                context.fillRect(10,10,400,320);
+            }
+
+            function drawRadialGradient(){
+                drawCanvas();
+                var grd = context.createRadialGradient(75,50,5,90,60,100);
+                grd.addColorStop(0,"red");
+                grd.addColorStop(0.3,"white");
+                grd.addColorStop(1,"pink");
+                context.fillStyle=grd;
+                context.fillRect(10,10,150,80);
+            }
+            function drawText(){
+                drawCanvas();
+                context.font="20pt Arial";
+                context.fillText("Piyush bhai",580,500);
+            }
+        </script>
+    </body>
+</html>

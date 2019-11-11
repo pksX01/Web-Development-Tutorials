@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        Enter your name: <input id="fname" type="text"/><br>
+        <input type="button" value="Store Name" onclick="SetValueClick()"/>
+        <input type="button" value="Get Name" onclick="GetValueClick()"/>
+        <div id="div1"></div>
+
+        <script>
+            function SetValueClick(){
+                var name=document.getElementById("fname");
+                sessionStorage.setItem("My name",name.value);
+            }
+
+            function GetValueClick(){
+                alert(sessionStorage.getItem("My name"));
+            }
+        </script>
+    </body>
+</html>

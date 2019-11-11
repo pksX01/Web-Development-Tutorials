@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <input type="button" value="check" onclick="geolocation()"/> -->
+        <script>
+            var div1;
+            function geolocation(){
+                div1 = document.getElementById("div1");
+                if(navigator.geolocation){
+                    console.log('Geolocation is supported');
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }
+                else{
+                    console.log("Geolocation is not supported")
+                }
+            }
+
+            function showPosition(position){
+                div1.innerHTML = "Latitude: "+ position.coords.latitude+"<br>"+"Longitude: "+position.coords.longitude;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Geolocation</h2>
+        <input type="button" value="Get Location" onclick="geolocation()">
+        <div id="div1"></div>
+    </body>
+</html>

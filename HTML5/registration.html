@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+    </head>
+    <body>
+        <!-- username,pswd,cnfm pswd, dob, email, hobbies(check box - 6, 3 in each line),
+             address, phone no, register button, cancel button, image , browse button for uploading-->
+        <div align="center">
+            <h1>Registration</h1>
+        </div>
+        <div align="center">
+            Username: <input type="text" placeholder="Enter the username"/><br><br>
+            Password: <input type="password" placeholder="Enter the password"/><br><br>
+            Confirm Password: <input type="password" placeholder="Re-enter the password"/><br><br>
+            Date of Birth: <input type="date" placeholder="Select your date of birth"/><br><br>
+            Email: <input type="email" placeholder="Enter your email address"/><br><br>
+            <fieldset>
+            <legend> Hobbies: </legend>
+            <input type="checkbox" name="hobby"/> Reading
+            <input type="checkbox" name="hobby"/> Listening to Songs
+            <input type="checkbox" name="hobby"/>Playing Badminton<br>
+            <input type="checkbox" name="hobby"/> Coding
+            <input type="checkbox" name="hobby"/> Watching Movies
+            <input type="checkbox" name="hobby"/>Playing Mobile Games<br>
+        </fieldset>
+            Address: <input type="text" /><br><br>
+            Phone No: <input type="tel" maxlength="10" pattern="d[0-9]*"/><br><br>
+            Image <input type="text"/> 
+            <input type="file" value="Browse"/><br><br>
+            <input type="button" value="Register"/>
+            <input type="button" value="Cancel"/><br>
+        </div>
+    </body>
+</html>
