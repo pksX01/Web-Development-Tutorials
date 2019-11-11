@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <canvas width="640" height="480" id="container">
+            Your browser does not support Canvas API.
+        </canvas>
+        <input type="button" value="Click" onclick="draw()"/>
+        <script>
+            function draw()
+            {
+                var canvas = document.getElementById("container");
+                var context = canvas.getContext("2d");
+                context.fillStyle="red";
+                context.fillRect(100,120,80,70)
+            }
+        </script>
+    </body>
+</html>
