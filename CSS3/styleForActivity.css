@@ -1,0 +1,17 @@
+table{
+    border: solid;
+    color: green; 
+}
+
+th{
+    border:double;
+    color: red;
+}
+
+td{
+    border: ridge;
+    color: black;
+}
+h3{
+    text-align: center;
+}
