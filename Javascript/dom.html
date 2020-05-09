@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div>
+            <input type="text" id="t1" autofocus="true" onfocus="focus()"/>
+            <span id="span1">
+
+            </span>
+
+            <p id="p1">
+
+            </p>
+        </div>
+    </body>
+
+    <script>
+        function displayText(){
+            document.getElementById("span1").innerHTML="This is span";
+        }
+
+        function focus(){
+            document.getElementById("t1").style.color= "red";
+        }
+    </script>
+</html>

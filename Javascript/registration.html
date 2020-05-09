@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <script type="text/javascript">
+            function registration(){
+                var user = document.getElementById("username").value;
+                var pass = document.getElementById("password").value;
+                var cnf_pass =document.getElementById("cnf_pass").value;
+                var dob = document.getElementById("dob").value;
+                var email = document.getElementById("email").value;
+                var mob = document.getElementById("mob").value;
+                var regex = "/ ^ ( ( [ \ - \ w ] + ) \ . ? ) + @ ( ( [ \ - \ w ] + ) \ . ? ) + \ . [ a - zA -Z ] { 2 , 4 } $ /";
+                if(user=="")
+                    alert("Enter your username");
+                else if(pass=="")
+                    alert("Enter the password");
+                else if(pass.length<8)
+                    alert("Please enter atleast 8 characters");
+                else if(!pass.search("[^0-9a-zA-Z]"))
+                    alert("Enter password in correct format");
+                else if (cnf_pass!=pass)
+                    alert("Confirm password is not same as password");
+                else if(email=="")
+                    alert("Enter your email");
+                else if(!email.search(regex))
+                    alert("Enter valid email address");
+                else
+                    alert("Registration is successfull");
+            }
+        </script>
+    </head>
+    <body>
+        <!-- username,pswd,cnfm pswd, dob, email, hobbies(check box - 6, 3 in each line),
+             address, phone no, register button, cancel button, image , browse button for uploading-->
+        <div align="center">
+            <h1>Registration</h1>
+        </div>
+        <div align="center">
+            Username: <input type="text" placeholder="Enter the username" id="username"/><br><br>
+            Password: <input type="password" placeholder="Enter the password" id="password"/><br><br>
+            Confirm Password: <input type="password" placeholder="Re-enter the password" id="cnf_pass"/><br><br>
+            Date of Birth: <input type="date" placeholder="Select your date of birth" id="dob"/><br><br>
+            Email: <input type="email" placeholder="Enter your email address" id="email"/><br><br>
+            <fieldset>
+            <legend> Hobbies: </legend>
+            <input type="checkbox" name="hobby"/> Reading
+            <input type="checkbox" name="hobby"/> Listening to Songs
+            <input type="checkbox" name="hobby"/>Playing Badminton<br>
+            <input type="checkbox" name="hobby"/> Coding
+            <input type="checkbox" name="hobby"/> Watching Movies
+            <input type="checkbox" name="hobby"/>Playing Mobile Games<br>
+        </fieldset>
+            Address: <input type="text" /><br><br>
+            Phone No: <input type="tel" maxlength="10" pattern="d[0-9]*" id="mob"/><br><br>
+            Image <input type="text"/> 
+            <input type="file" value="Browse"/><br><br>
+            <input type="button" value="Register" onclick="registration()"/>
+            <input type="button" value="Cancel" /><br>
+        </div>
+    </body>
+</html>

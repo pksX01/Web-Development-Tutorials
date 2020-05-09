@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <input type="text" id="t1"/><br>
+        <input type="text" id="t2"/><br>
+        <input type="button" value="Button" id="b1" onclick="ip()"/><br>
+        
+        <script>
+            function ip(){
+                var input1=document.getElementById("t1").value;
+                console.log(input1);
+                var input2=document.getElementById("t2").value;
+                console.log(input2);
+                document.writeln(input1/input2);
+            }
+        </script>
+    </body>
+</html>

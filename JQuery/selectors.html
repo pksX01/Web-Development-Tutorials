@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./jquery.js">
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                // $('.paragraph')
+                // $('#div2')
+                // $('#b1')
+                $('p').text("Jai Ho");
+                $('#div2').css({"background-color":"red","border-style":"solid"});
+                $('#b1').click(function(){
+                    alert("Button 1 is clicked");
+                });
+
+                $('input[type="button"]').css("background-color","red");
+                $('*').css("font-style","italic");
+            });
+           
+        </script>
+    </head>
+
+    <body>
+        <div id="div1">
+            <p id="p1" class="paragraph"> Hello World</p>
+            <p id="p2" class="paragraph">James Bond OO7</p>
+            <input type="button" value="Button 1" id="b1" class="btn"/>
+        </div>
+
+        <div id="div2">
+                <!-- <p id="p1" class="paragraph"> Hello World</p> -->
+                <!-- <p id="p2" class="paragraph">James Bond OO7</p> -->
+                <input type="button" value="Button 2" id="b2" class="btn"/>
+        </div>   
+
+    </body>
+</html>

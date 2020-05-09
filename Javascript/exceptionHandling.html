@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Demo: Error Handling</h1>
+        <output style="color: red;" id="errorMessage"></output>
+        <br/>
+        <br/>
+        <script>
+            function getMonthName(mo){
+                mo--;
+                var months = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+                if(months[mo]!=null){
+                    return months[mo];
+                }
+                else
+                    throw "InvalidMonthNo";
+            }
+
+            try{
+                monthName=getMonthName(1);
+                console.log("Month: "+monthName);
+            }
+            catch(e){
+                monthName="unknown";
+                document.getElementById("errorMessage").value=e;
+            }
+        </script>
+    </body>
+</html>
+

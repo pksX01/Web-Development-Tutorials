@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <button onclick="hello()">Hello</button>
+        <input type="button" value="Delete Record" onclick="message()"/>
+        <button onclick="showName()">Show</button>
+
+        <button onclick="openWindow()">Open Accenture Portal new Window</button>
+        <button onclick="closeOpenedWindow()">Close Opened Window</button>
+
+        <script>
+            function hello(){
+                var username='Rohan';
+                alert('Hello '+username);
+                window.alert('Welcome to Accenture');
+            }
+
+            function message(){
+                var aVar = confirm("Are you sure, you want to delete?");
+                if(aVar==true)
+                    alert("Record successfully deleted!");
+                else
+                    alert("Cancelling deletion!");
+            }
+
+            function showName(){
+                var pName='Enter your name';
+                pName=prompt("What is your name?");
+                alert("Hello "+pName);
+            }
+
+            function openWindow(){
+                openedWindow = window.open("https://www.google.co.in");
+            }
+
+            function closeOpenedWindow(){
+                openedWindow.close();
+            }
+        </script>
+    </body>
+</html>

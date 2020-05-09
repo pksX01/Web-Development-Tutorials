@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <script text="text/javascript">
+            function login(){
+                
+                var user=document.getElementById("username").value;
+                var pass=document.getElementById("password").value;
+                if(user=="")
+                    alert("Enter your username");
+                else if(pass=="")
+                    alert("Enter the password");
+                else if(pass.length<8)
+                    alert("Please enter atleast 8 characters");
+                else if(!pass.search("[^0-9a-zA-Z]"))
+                    alert("Enter password in correct format");
+                else
+                    alert("Login is successfull");
+            }
+        </script>
+    </head>
+    <body>
+        <div align="center">
+            <header>
+                <h1>
+                    <img src="C:\Users\pavan.a.kumar.singh\Desktop\images.png" width="30" height="30"/>
+                    20 SEP OB - Hyderabad 
+                </h1>
+            </header>
+        </div>
+        <div align="center">
+            <p>Login Please!!! </p>
+            Username: <input type="text" autofocus="true" required placeholder="Enter your username" id="username"/><br><br>
+            Password: <input type="password" placeholder="Enter your password" id="password"/><br><br>
+            <input type="button" value="Login" onclick="login()"/>
+            <input type="button" value="Reset"/><br><br>
+            <a href="registration.html">New User??</a>
+        </div>
+
+        <footer>
+            <p>&copy Copyright reserved</p>
+        </footer>
+    </body>
+</html>

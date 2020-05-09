@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Using External Script</title>
+        <script type="text/javascript" src="Global.js">
+        </script>
+    </head>
+    
+    <body>
+        <div style="background-color: bisque;" onclick="display()">
+            <h2>External JS file is used</h2>
+        </div>
+        
+        <div style="background-color:darkcyan;" ondblclick="inline()" onmouseout="signoff()">
+                <h2>Multiple JS files are used</h2>
+        </div>
+        
+        <script type="text/javascript"> 
+            function inline(){
+                alert("Inline function is called..");
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./jquery.js"></script>
+        <script>
+            $('document').ready(function(){
+                $('#div1').click(function(){
+                $('#div2').toggle()
+                });
+            });
+            
+        </script>
+    </head>
+
+    <body>
+        <div style="background-color: blue; border-style: solid;" id="div1">
+            
+            <div style="background-color: pink;" id="div2">
+                    <input type="text" placeholder="Enter username"/><br/>
+                    <input type="password" placeholder="Enter password"/><br/>
+                    <input type="button" value="Login" id="b1"/>
+            </div>
+            <!-- <p>World</p> -->
+        </div>
+    </body>
+</html>
